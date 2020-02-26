@@ -1,5 +1,7 @@
 <template>
-  $END$
+  <div class="profile">
+    我的
+  </div>
 </template>
 
 <script>

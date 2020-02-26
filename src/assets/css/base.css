@@ -1,0 +1,25 @@
+@import "./normalize.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.swiper-pagination-bullet{
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.swiper-pagination-bullet{
+    background-color: #fff!important;
+    opacity: 1!important;
+}
+.swiper-pagination-bullet-active {
+    background: #db4c36!important;
+}

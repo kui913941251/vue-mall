@@ -7,6 +7,7 @@ const Home = () => import("../views/home/Home.vue")
 const Category = () => import("../views/category/Category.vue")
 const Shopcart = () => import("../views/shopcart/ShopCart.vue")
 const Profile = () => import("../views/profile/Profile.vue")
+const Detail = () => import("views/detail/Detail.vue")
 
 const routes = [
   {
@@ -28,12 +29,20 @@ const routes = [
   {
     path: "/profile",
     component: Profile
+  },
+  {
+    path: "/detail/:id",
+    component: Detail
   }
 ]
 
 const router = new VueRouter({
-  routes,
-  mode: "history"
+  routes
+})
+
+router.beforeEach((to , from , next) => {
+  // to.$mySwiper.autoplay.start()
+  next()
 })
 
 export default router
