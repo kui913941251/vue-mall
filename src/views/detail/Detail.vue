@@ -35,6 +35,7 @@
 
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import Scroll from "components/common/scroll/Scroll";
+  import Toast from "components/common/toast/Toast";
 
   import {getGoodsDetail , getGoodsRecommend , Goods , Shop , GoodsParams} from "network/detail";
   import {debounce} from "common/tool";
@@ -54,6 +55,7 @@
       DetailBottomBar,
       GoodsList,
       Scroll,
+      Toast
     },
     mixins: [
       BackTopMixin
@@ -193,11 +195,8 @@
         // 将商品对象传入vuex
         // 保存this
         const _this = this
-        this.$store.dispatch("addGoods" , {
-          product,
-          callBack(value) {
-            _this.tipText = value
-          }
+        this.$store.dispatch("addGoods" , product).then(res => {
+          this.$toast.show(res , 2000)
         })
       }
     },

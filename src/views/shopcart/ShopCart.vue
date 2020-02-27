@@ -3,7 +3,7 @@
     <nav-bar class="cart_nav">
       <div slot="slot_center">购物车({{cartList.length}})</div>
     </nav-bar>
-    <scroll class="scroll">
+    <scroll class="scroll" ref="scroll">
       <cart-list :cartList="cartList"></cart-list>
     </scroll>
     <tool-bar></tool-bar>
@@ -30,8 +30,26 @@
         cartList: []
       }
     },
+    watch: {
+      cartList() {
+        console.log(this.cartList)
+      }
+    },
+    activated() {
+      this.$refs.scroll.scroll.refresh()
+      console.log(this.$refs.scroll.scroll.scrollerHeight , this.$refs.scroll.scroll.scrollerHeight)
+    },
     created() {
       this.cartList = this.$store.state.cartList
+    },
+    methods: {
+      clearAccount() {
+        this.$store.dispatch("clearAccount").then(res => {
+          this.$toast.show(res , 2000)
+        })
+      }
+    },
+    mounted() {
     }
   }
 </script>

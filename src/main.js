@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from "./router"
 import store from "./store";
 
+import toast from "components/common/toast/index"
+Vue.use(toast)
+
 import 'swiper/dist/css/swiper.css'
 //（如果使用的是2.6.0以上的版本需要自己手动去加载css）
 import VueAwesomeSwiper from 'vue-awesome-swiper'

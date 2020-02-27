@@ -45,7 +45,9 @@
       },
       // 购买成功，清除购物车
       clearAccount() {
-        this.$store.dispatch("clearAccount")
+        this.$store.dispatch("clearAccount").then(res => {
+          this.$toast.show(res , 2000)
+        })
       }
     }
   }

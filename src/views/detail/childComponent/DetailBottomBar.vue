@@ -14,22 +14,16 @@
     </div>
     <div class="add_goods" @click="addClick">加入购物车</div>
     <div class="buy_goods">购买</div>
-    <detail-alert-text :show-text="showText"
-                       v-show="showStar"></detail-alert-text>
   </div>
 </template>
 
 <script>
-  import DetailAlertText from "./DetailAlertText";
 
   export default {
     name: "DetailBottomBar",
     props: {
       tipText: String,
 
-    },
-    components: {
-      DetailAlertText
     },
     data() {
       return {
@@ -51,13 +45,8 @@
           this.showText = "取消收藏"
         }
       },
-      async addClick() {
-        await this.$emit("addGoods")
-        this.showText = this.tipText
-        this.showStar = true
-        setTimeout(() => {
-          this.showStar = false
-        } , 2000)
+      addClick() {
+        this.$emit("addGoods")
       }
     }
   }
