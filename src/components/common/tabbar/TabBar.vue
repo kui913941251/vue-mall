@@ -45,5 +45,6 @@
     background-color: #f6f6f6;
     padding-top: 4px;
     box-sizing: border-box;
+    box-shadow: 0 1px 5px #999 ;
   }
 </style>

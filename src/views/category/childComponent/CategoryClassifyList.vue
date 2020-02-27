@@ -31,6 +31,5 @@
 
   p {
     text-align: center;
-    border-bottom: 1px solid #eee;
   }
 </style>

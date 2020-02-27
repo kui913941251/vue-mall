@@ -53,8 +53,8 @@
     overflow: hidden;
     width: 80px;
     float: left;
-    border-right: 1px solid #eee;
     box-sizing: border-box;
+    background-color: #f7f5f7;
   }
   .scroll_right{
     height: calc(100vh - 44px - 49px);

@@ -30,14 +30,9 @@
         cartList: []
       }
     },
-    watch: {
-      cartList() {
-        console.log(this.cartList)
-      }
-    },
     activated() {
       this.$refs.scroll.scroll.refresh()
-      console.log(this.$refs.scroll.scroll.scrollerHeight , this.$refs.scroll.scroll.scrollerHeight)
+      // console.log(this.$refs.scroll.scroll.scrollerHeight , this.$refs.scroll.scroll.scrollerHeight)
     },
     created() {
       this.cartList = this.$store.state.cartList

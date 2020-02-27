@@ -41,10 +41,12 @@
     text-align: center;
     font-size: 15px;
     padding: 5px 0;
+    color: #888789;
   }
 
   .active{
-    background-color: #ff8198;
-    color: #fff;
+    background-color: #fff;
+    border-left: 3px solid #ff8198;
+    color: #ff8198 !important;
   }
 </style>
